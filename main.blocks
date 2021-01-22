@@ -1,4 +1,4 @@
-<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable id="V9UpuG-Z)`U~QvG?sbPv">X wing fighter</variable><variable type="KIND_SpriteKind" id="I1cTs,ucx~OxE|u*Z897">Player</variable><variable type="KIND_SpriteKind" id="uJjQdk{~U%{[3pWx4cn|">Projectile</variable><variable type="KIND_SpriteKind" id="}R/]Y7|WObr4r{i*gl0j">Food</variable><variable type="KIND_SpriteKind" id="O-~58qP:Ig_%J[E7r5]P">Enemy</variable></variables><block type="pxt-on-start" id="`ZeeE3`(*c0R6]:g,T;}" x="0" y="0"><statement name="HANDLER"><block type="variables_set" id="{GF45TJPnB:mle?C!m{o"><field name="VAR" id="V9UpuG-Z)`U~QvG?sbPv">X wing fighter</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="MFq5wf7T2|Jv$v0/1jo3"><value name="img"><shadow type="screen_image_picker" id="4b61LN]]d/r1FWTu(^`_"><field name="img">img`
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable type="KIND_SpriteKind" id="I1cTs,ucx~OxE|u*Z897">Player</variable><variable type="KIND_SpriteKind" id="uJjQdk{~U%{[3pWx4cn|">Projectile</variable><variable type="KIND_SpriteKind" id="}R/]Y7|WObr4r{i*gl0j">Food</variable><variable type="KIND_SpriteKind" id="O-~58qP:Ig_%J[E7r5]P">Enemy</variable><variable id="V9UpuG-Z)`U~QvG?sbPv">X wing fighter</variable><variable id="MgX|[,TcV52t!.M+f;-P">mySprite</variable><variable id="CqpYk]x`M^}}s/kp;+v;">blaster</variable><variable id="UCpj9Z=[90Qu;M|@:^`L">projectile</variable><variable id="Kbz![5]d`o*2s38U@,3g">Tie Fighter</variable></variables><block type="pxt-on-start" id="`ZeeE3`(*c0R6]:g,T;}" x="0" y="0"><statement name="HANDLER"><block type="variables_set" id="{GF45TJPnB:mle?C!m{o"><field name="VAR" id="V9UpuG-Z)`U~QvG?sbPv">X wing fighter</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="MFq5wf7T2|Jv$v0/1jo3"><value name="img"><shadow type="screen_image_picker" id="4b61LN]]d/r1FWTu(^`_"><field name="img">img`
 ....ffffffff..................
 ...f22f.......................
 ...f21f.......................
@@ -29,4 +29,38 @@ fffffffffffffff...............
 ..............................
 ..............................
 ..............................
-`</field></shadow></value><value name="kind"><shadow type="spritekind" id="1HJj?(E]JyiS|5[@W#bm"><field name="MEMBER">Player</field></shadow></value></block></value></block></statement></block></xml>
+`</field></shadow></value><value name="kind"><shadow type="spritekind" id="1HJj?(E]JyiS|5[@W#bm"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="spritesetsetflag" id="R5Fpds/ouh`(a8HE]SpO"><field name="flag">SpriteFlag.StayInScreen</field><value name="sprite"><block type="variables_get" id="DV!ij~=^XfW[qY;z/Wv5"><field name="VAR" id="V9UpuG-Z)`U~QvG?sbPv">X wing fighter</field></block></value><value name="on"><shadow type="toggleOnOff" id="GiE#K_Z;bJ(j:{B3gyU@"><field name="on">true</field></shadow></value><next><block type="hudSetLife" id="/Hf!s_[;[6EHguQv6i~f"><value name="value"><shadow type="math_number" id="pVLMs+n,rcpwFiOIUi/+"><field name="NUM">3</field></shadow></value><next><block type="game_control_sprite" id="x:+9jBRhshrqe%NV|%?+"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="false"></mutation><value name="sprite"><block type="variables_get" id="^}Zv8m|vqu;)[YX#l=un"><field name="VAR" id="V9UpuG-Z)`U~QvG?sbPv">X wing fighter</field></block></value></block></next></block></next></block></next></block></statement></block><block type="keyonevent" id="qz2|M(1zwv2PPJ$Jr(s]" x="10" y="330"><field name="button">controller.A</field><field name="event">ControllerButtonEvent.Pressed</field><statement name="HANDLER"><block type="variables_set" id="w~dC8/Mic{0ZTX;1+OjD"><field name="VAR" id="UCpj9Z=[90Qu;M|@:^`L">projectile</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreateprojectilefromsprite" id="l!1?P?jI{#rwVfr%XJ37"><value name="img"><shadow type="screen_image_picker" id="DlaxlT}b~b]qnR8ArXw^"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . 2 2 2 2 2 2 2 2 2 2 . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . 2 2 2 2 2 2 2 2 2 2 . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field></shadow></value><value name="sprite"><block type="variables_get" id=";-H_7d0!K11^KMW|kECu"><field name="VAR" id="V9UpuG-Z)`U~QvG?sbPv">X wing fighter</field></block></value><value name="vx"><shadow type="spriteSpeedPicker" id="AoNCsTtWa(y~~*%+lwnk"><field name="speed">200</field></shadow></value><value name="vy"><shadow type="spriteSpeedPicker" id="v!`Nv*L%+louHDaF63^m"><field name="speed">0</field></shadow></value></block></value></block></statement></block><block type="gameinterval" id="BTRIMD-G5.x~eyy[`OsJ" x="30" y="530"><value name="period"><shadow type="timePicker" id="2ln*hSzy-L-eIy0DR]7|"><field name="ms">500</field></shadow></value><statement name="HANDLER"><block type="variables_set" id="SS,srgz7Hxh=GfkYBJab"><field name="VAR" id="Kbz![5]d`o*2s38U@,3g">Tie Fighter</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id=":4Aw6jAdH,;$iDwB({l^"><value name="img"><shadow type="screen_image_picker" id="K%]CGY!{X#3c8xxzGeu["><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . f . f f f f f . f . . . . 
+. . . f f f f d f f f f . . . . 
+. . . f f f d f d f f f . . . . 
+. . . f f d f f f d f f . . . . 
+. . . f f f d f d f f f . . . . 
+. . . f f f f d f f f f . . . . 
+. . . f . f f f f f . f . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field></shadow></value><value name="kind"><shadow type="spritekind" id="BKMl3m7ZxYPI~#hH~@IF"><field name="MEMBER">Enemy</field></shadow></value></block></value><next><block type="spritesetvel" id="iS~pl84{^,pGoiFg:~DU"><value name="sprite"><block type="variables_get" id="!NsX/nZ)*Jg9%[xJ%IXI"><field name="VAR" id="Kbz![5]d`o*2s38U@,3g">Tie Fighter</field></block></value><value name="vx"><shadow type="spriteSpeedPicker" id="XIfTOm(gUcjGzBSu[gzo"><field name="speed">-100</field></shadow></value><value name="vy"><shadow type="spriteSpeedPicker" id="llgqVtl4):9_{#LGLT3|"><field name="speed">0</field></shadow></value></block></next></block></statement></block></xml>

@@ -1,4 +1,27 @@
-let X_wing_fighter = sprites.create(img`
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    projectile = sprites.createProjectileFromSprite(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . 2 2 2 2 2 2 2 2 2 2 . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . 2 2 2 2 2 2 2 2 2 2 . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `, X_wing_fighter, 200, 0)
+})
+let Tie_Fighter: Sprite = null
+let projectile: Sprite = null
+let X_wing_fighter: Sprite = null
+X_wing_fighter = sprites.create(img`
     ....ffffffff..................
     ...f22f.......................
     ...f21f.......................
@@ -30,3 +53,27 @@ let X_wing_fighter = sprites.create(img`
     ..............................
     ..............................
     `, SpriteKind.Player)
+X_wing_fighter.setFlag(SpriteFlag.StayInScreen, true)
+info.setLife(3)
+controller.moveSprite(X_wing_fighter)
+game.onUpdateInterval(500, function () {
+    Tie_Fighter = sprites.create(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . f . f f f f f . f . . . . 
+        . . . f f f f d f f f f . . . . 
+        . . . f f f d f d f f f . . . . 
+        . . . f f d f f f d f f . . . . 
+        . . . f f f d f d f f f . . . . 
+        . . . f f f f d f f f f . . . . 
+        . . . f . f f f f f . f . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `, SpriteKind.Enemy)
+    Tie_Fighter.setVelocity(-100, 0)
+})
